@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Download Shapefiles from Natural Earth
-# curl -LOk -O http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip
-# curl -LOk -O http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_1_states_provinces.zip
+curl -LOk -O http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip
+curl -LOk -O http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_1_states_provinces.zip
 
 # Unzip downloaded files
 unzip -o ne_10m_admin_0_countries.zip
-unzio -o ne_10m_admin_1_states_provinces.zip
+unzip -o ne_10m_admin_1_states_provinces.zip
 
 # Convert Shapefile to NDJSON
 shp2json -n ne_10m_admin_0_countries.shp > world_countries.ndjson
